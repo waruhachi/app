@@ -120,7 +120,7 @@ jobs:
           fi
     
           # Find the .deb file in main/packages
-          DEB_FILE=$(find main/packages -name "*.deb" -type f | head -n1)
+          DEB_FILE=$(find "$GITHUB_WORKSPACE/main/packages" -name "*.deb" -type f | head -n1)
           if [ -z "$DEB_FILE" ]; then
           echo "❌ No .deb file found in main/packages"
           exit 1
